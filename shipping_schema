@@ -24,9 +24,9 @@ CREATE TYPE status_type AS ENUM('Awaiting Collection', 'Send', 'In Transport', '
 CREATE TABLE tracking (
 	id int primary key,
 	status status_type,
+	is_actual bool not null,
 	city varchar(60) not null,
 	state varchar(30) not null,
-	is_actual bool not null,
 	transport_order_id int not null,
 	foreign key(transport_order_id) references transport_order(id)
 );
