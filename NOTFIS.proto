@@ -35,8 +35,9 @@ message Address {
     string street = 1;
     string district = 2;
     int32 number = 3;
-    string cep = 4;
-    optional string complement = 5;
+    string city = 4;
+    string cep = 5;
+    optional string complement = 6;
 }
 
 message Request {
